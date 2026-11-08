@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f2">
+  <meta name="description" content="Bita Karvizi — Software Developer and MSc Computer Science student at Karlsruhe Institute of Technology.">
+  <meta name="author" content="Bita Karvizi">
+  <meta name="keywords" content="Bita Karvizi, Software Engineer, Android Developer, Software Engineering, KIT">
+  <meta property="og:title" content="Bita Karvizi — Software Developer">
+  <meta property="og:description" content="Software developer interested in building reliable software and exploring software engineering research.">
+  <meta property="og:type" content="website">
+  <title>Bita Karvizi — Software Developer</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231b2b34'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='27' font-weight='bold' fill='%23b6d9ce'%3EBK%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --paper: #f7f7f2;
+      --surface: #ffffff;
+      --ink: #1b2b34;
+      --muted: #65737a;
+      --line: #e3e8e3;
+      --accent: #287c70;
+      --accent-soft: #e5f0eb;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --width: 1080px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration-color: #a9c8bd; text-underline-offset: 4px; }
+    a:hover { color: var(--accent); }
+    .wrap { width: min(var(--width), calc(100% - 48px)); margin-inline: auto; }
+    .topbar { position: sticky; top: 0; z-index: 10; background: rgba(247,247,242,.92); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(227,232,227,.85); }
+    .nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-weight: 750; letter-spacing: -.05em; font-size: 1.2rem; text-decoration: none; }
+    .brand span { color: var(--accent); }
+    .navlinks { display: flex; align-items: center; gap: 27px; }
+    .navlinks a { color: var(--muted); font-size: .88rem; text-decoration: none; }
+    .navlinks a:hover { color: var(--accent); }
+    .navlinks .nav-cta { color: var(--ink); border: 1px solid #cbd7d0; border-radius: 999px; padding: 8px 15px; }
+    .hero { padding: 108px 0 92px; display: grid; grid-template-columns: minmax(0,1fr) 250px; gap: 65px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--accent); font-size: .78rem; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
+    .eyebrow:before { content: ""; width: 23px; height: 1px; background: currentColor; }
+    h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(3.1rem, 7vw, 5.7rem); letter-spacing: -.065em; line-height: .99; margin: 22px 0 24px; }
+    h1 em { color: var(--accent); font-weight: 400; }
+    .hero-copy { max-width: 660px; color: #53636a; font-size: 1.12rem; line-height: 1.85; }
+    .hero-copy strong { color: var(--ink); font-weight: 650; }
+    .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 13px; margin-top: 32px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 47px; padding: 0 20px; border-radius: 999px; background: var(--ink); color: white; font-size: .9rem; font-weight: 650; text-decoration: none; transition: transform .2s, background .2s; }
+    .button:hover { color: white; background: var(--accent); transform: translateY(-2px); }
+    .button.secondary { background: transparent; color: var(--ink); border: 1px solid #cbd7d0; }
+    .button.secondary:hover { color: var(--accent); border-color: var(--accent); background: transparent; }
+    .hero-aside { border-left: 1px solid var(--line); padding-left: 28px; }
+    .monogram { width: 104px; height: 104px; display: grid; place-items: center; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-family: var(--serif); font-size: 2.6rem; margin-bottom: 25px; }
+    .aside-label { color: var(--muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; font-weight: 700; margin: 20px 0 5px; }
+    .aside-value { font-size: .93rem; font-weight: 600; line-height: 1.5; }
+    section { padding: 82px 0; border-top: 1px solid var(--line); }
+    .section-head { display: grid; grid-template-columns: 210px minmax(0,1fr); gap: 42px; margin-bottom: 42px; }
+    .section-kicker { color: var(--accent); font-size: .76rem; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; padding-top: 10px; }
+    h2 { font-family: var(--serif); font-size: clamp(2.1rem, 4vw, 3.15rem); line-height: 1.1; letter-spacing: -.045em; font-weight: 500; margin: 0; }
+    .section-intro { color: var(--muted); max-width: 700px; margin: 14px 0 0; }
+    .about-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 60px; }
+    .about-text { color: #53636a; font-size: 1.03rem; }
+    .about-text p:first-child { margin-top: 0; }
+    .interest-list { display: flex; flex-wrap: wrap; gap: 9px; align-content: start; }
+    .tag { display: inline-flex; padding: 8px 13px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); color: #52636a; font-size: .83rem; }
+    .timeline { border-left: 1px solid #cbd7d0; margin-left: 7px; padding-left: 30px; display: grid; gap: 34px; }
+    .entry { position: relative; display: grid; grid-template-columns: 1fr auto; gap: 20px; }
+    .entry:before { content: ""; position: absolute; left: -36px; top: 9px; width: 11px; height: 11px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px var(--paper); }
+    .entry h3 { margin: 0 0 4px; font-size: 1.06rem; letter-spacing: -.02em; }
+    .entry .org { color: var(--accent); font-size: .91rem; font-weight: 650; }
+    .entry .date { color: var(--muted); font-size: .83rem; white-space: nowrap; padding-top: 3px; }
+    .entry p { color: var(--muted); margin: 10px 0 0; max-width: 720px; font-size: .94rem; }
+    .entry ul { color: var(--muted); padding-left: 19px; margin: 10px 0 0; font-size: .92rem; }
+    .subheading { font-family: var(--serif); font-size: 1.8rem; font-weight: 500; letter-spacing: -.03em; margin: 65px 0 27px; }
+    .education-card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 27px 30px; display: grid; grid-template-columns: 1fr auto; gap: 20px; }
+    .education-card h3 { margin: 0 0 5px; font-size: 1.08rem; }
+    .education-card p { margin: 0; color: var(--muted); font-size: .92rem; }
+    .education-card .date { color: var(--muted); font-size: .84rem; white-space: nowrap; }
+    .projects { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+    .project { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 27px; display: flex; flex-direction: column; min-height: 260px; transition: transform .2s, border-color .2s; }
+    .project:hover { transform: translateY(-3px); border-color: #b7cfc4; }
+    .project-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; color: var(--accent); font-size: .76rem; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+    .project h3 { font-family: var(--serif); font-size: 1.65rem; font-weight: 500; letter-spacing: -.035em; line-height: 1.2; margin: 22px 0 10px; }
+    .project p { color: var(--muted); font-size: .92rem; margin: 0 0 20px; }
+    .project .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: auto; }
+    .project .tags span { font-size: .74rem; color: #66757a; background: #f2f5f1; border-radius: 5px; padding: 4px 8px; }
+    .project-link { display: inline-block; margin-top: 18px; font-size: .88rem; font-weight: 650; color: var(--accent); text-decoration: none; }
+    .skills-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
+    .skill { padding: 22px; border: 1px solid var(--line); background: var(--surface); border-radius: 14px; }
+    .skill h3 { margin: 0 0 9px; font-size: .98rem; }
+    .skill p { margin: 0; color: var(--muted); font-size: .87rem; line-height: 1.8; }
+    .contact-panel { background: var(--ink); color: white; border-radius: 20px; padding: clamp(28px,5vw,55px); display: grid; grid-template-columns: 1fr auto; gap: 30px; align-items: end; }
+    .contact-panel h2 { color: white; }
+    .contact-panel p { color: #c2d0d0; max-width: 570px; margin: 15px 0 0; }
+    .contact-links { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
+    .contact-links a { border: 1px solid #52636a; color: white; border-radius: 999px; padding: 9px 14px; font-size: .83rem; text-decoration: none; }
+    .contact-links a:hover { border-color: #a8d0c1; color: #a8d0c1; }
+    footer { padding: 27px 0 38px; color: var(--muted); font-size: .8rem; display: flex; justify-content: space-between; gap: 20px; }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 36px, var(--width)); }
+      .nav { min-height: 64px; }
+      .navlinks { gap: 14px; }
+      .navlinks a { font-size: .78rem; }
+      .navlinks a:not(.nav-cta) { display: none; }
+      .hero { padding: 78px 0 65px; grid-template-columns: 1fr; gap: 35px; }
+      .hero-aside { border-left: 0; border-top: 1px solid var(--line); padding: 23px 0 0; display: grid; grid-template-columns: 70px 1fr 1fr; gap: 12px; align-items: center; }
+      .monogram { width: 62px; height: 62px; font-size: 1.7rem; margin: 0; }
+      .aside-label { margin: 0 0 3px; font-size: .65rem; }
+      .aside-value { font-size: .8rem; }
+      section { padding: 62px 0; }
+      .section-head { grid-template-columns: 1fr; gap: 12px; margin-bottom: 30px; }
+      .about-grid { grid-template-columns: 1fr; gap: 25px; }
+      .entry { grid-template-columns: 1fr; gap: 2px; }
+      .entry .date { grid-row: 1; }
+      .projects, .skills-grid { grid-template-columns: 1fr; }
+      .education-card { grid-template-columns: 1fr; gap: 5px; }
+      .contact-panel { grid-template-columns: 1fr; }
+      .contact-links { justify-content: flex-start; }
+      footer { flex-direction: column; gap: 5px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bita Karvizi",
+    "jobTitle": "Software Developer",
+    "url": "https://bitakarvizi.ir",
+    "email": "mailto:bita.karvizi1379@gmail.com",
+    "sameAs": [
+      "https://github.com/bitua79",
+      "https://www.linkedin.com/in/bita-karvizi-191920199"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="brand" href="#home">bita<span>.</span></a>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a class="nav-cta" href="#contact">Get in touch ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="wrap" id="home">
+      <section class="hero" style="border-top:0">
+        <div>
+          <div class="eyebrow">Software developer · Karlsruhe, Germany</div>
+          <h1>Hi, I'm<br><em>Bita Karvizi.</em></h1>
+          <p class="hero-copy">
+            I'm a software developer with <strong>4+ years of professional Android development experience</strong>,
+            currently pursuing an MSc in Computer Science at <strong>Karlsruhe Institute of Technology (KIT)</strong>.
+            I enjoy understanding how software works, building reliable applications, and exploring ideas at the
+            intersection of software engineering and research.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
+            <a class="button secondary" href="mailto:bita.karvizi1379@gmail.com">Contact me</a>
+          </div>
+        </div>
+        <aside class="hero-aside" aria-label="Quick profile">
+          <div class="monogram" aria-hidden="true">BK</div>
+          <div>
+            <div class="aside-label">Currently</div>
+            <div class="aside-value">MSc Computer Science<br>KIT</div>
+          </div>
+          <div>
+            <div class="aside-label">Focus</div>
+            <div class="aside-value">Software Engineering<br>& Mobile Development</div>
+          </div>
+        </aside>
+      </section>
+    </div>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">01 / About</div>
+          <div>
+            <h2>Curious about the<br>details behind software.</h2>
+            <p class="section-intro">I like moving beyond making things work to understanding why they work, how they can evolve, and how to make them more dependable.</p>
+          </div>
+        </div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>My background is in Computer Engineering, and most of my professional experience has been in Android development. I've worked on production applications, application security, and projects involving communication between mobile software and hardware.</p>
+            <p>Alongside development, I've been involved in academic research on automated repair of GUI-based Android test scripts. This has strengthened my interest in software testing, software evolution, and the ways large language models can support software engineering tasks.</p>
+            <p>I'm currently studying Computer Science at KIT, where I'm broadening my foundations and looking forward to applying what I learn to practical engineering and research challenges.</p>
+          </div>
+          <div>
+            <div class="section-kicker" style="margin-bottom:15px">Research interests</div>
+            <div class="interest-list">
+              <span class="tag">Software Engineering</span>
+              <span class="tag">Software Testing</span>
+              <span class="tag">Automated Test Repair</span>
+              <span class="tag">LLMs for SE</span>
+              <span class="tag">Software Evolution</span>
+              <span class="tag">Software Security</span>
+              <span class="tag">Programming Languages</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">02 / Experience</div>
+          <div>
+            <h2>Where I've worked<br>and what I've explored.</h2>
+            <p class="section-intro">A mix of industry experience, research, and hands-on engineering.</p>
+          </div>
+        </div>
+        <div class="timeline">
+          <article class="entry">
+            <div>
+              <h3>Research Assistant</h3>
+              <div class="org">Software Quality Lab · Ferdowsi University of Mashhad</div>
+              <p>Working on automated repair of GUI-based Android test scripts as applications evolve. Exploring test repair approaches, GUI structure matching, and the use of language models in software engineering.</p>
+            </div>
+            <div class="date">Apr 2024 – Present</div>
+          </article>
+          <article class="entry">
+            <div>
+              <h3>Android Developer</h3>
+              <div class="org">Pars Software Group</div>
+              <p>Contributed to industrial Android applications, including digital-signature and secure document workflows. Worked with Kotlin, application architecture, networking, and JNI-based security-related functionality.</p>
+            </div>
+            <div class="date">Nov 2021 – Present*</div>
+          </article>
+          <article class="entry">
+            <div>
+              <h3>Android Developer</h3>
+              <div class="org">SeeNous</div>
+              <p>Worked as the Android developer on an application integrating mobile software with embedded hardware, including device communication and data exchange.</p>
+            </div>
+            <div class="date">Jul 2025 – Feb 2026</div>
+          </article>
+          <article class="entry">
+            <div>
+              <h3>Research & Engineering Projects</h3>
+              <div class="org">FUM-CARE Center and university laboratories</div>
+              <p>Earlier hands-on work with embedded systems, robotics, ESP boards, and Arduino-based projects.</p>
+            </div>
+            <div class="date">2019 – 2022</div>
+          </article>
+        </div>
+        <p style="color:var(--muted);font-size:.8rem;margin:18px 0 0">*Please confirm whether your Pars Software Group role should still be listed as ongoing.</p>
+
+        <h3 class="subheading">Education</h3>
+        <div class="education-card">
+          <div>
+            <h3>MSc in Computer Science</h3>
+            <p>Karlsruhe Institute of Technology (KIT) · Karlsruhe, Germany</p>
+          </div>
+          <div class="date">2026 – Present</div>
+        </div>
+        <div class="education-card" style="margin-top:12px">
+          <div>
+            <h3>BSc in Computer Engineering</h3>
+            <p>Ferdowsi University of Mashhad · GPA: 3.55 / 4.00</p>
+          </div>
+          <div class="date">2019 – 2024</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">03 / Selected work</div>
+          <div>
+            <h2>Some things I've built.</h2>
+            <p class="section-intro">A selection of academic and personal projects. More details and additional work are available on GitHub.</p>
+          </div>
+        </div>
+        <div class="projects">
+          <article class="project">
+            <div class="project-top"><span>Android · Industry</span><span>01</span></div>
+            <h3>FaraShenaSign</h3>
+            <p>An Android application for digital certification and electronic document signing, developed as the main Android developer. Supports secure document workflows and remote signing.</p>
+            <div class="tags"><span>Kotlin</span><span>Android</span><span>JNI</span><span>Security</span></div>
+            <a class="project-link" href="https://myket.ir/app/ir.part.app.farashenasign" target="_blank" rel="noopener noreferrer">View application ↗</a>
+          </article>
+          <article class="project">
+            <div class="project-top"><span>Android · Bachelor's project</span><span>02</span></div>
+            <h3>Student Attendance App</h3>
+            <p>An Android application for managing student attendance, built as my bachelor's project.</p>
+            <div class="tags"><span>Kotlin</span><span>MVVM</span><span>Room</span><span>Firebase</span></div>
+            <a class="project-link" href="https://github.com/bitua79/presence-absence-app" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a>
+          </article>
+          <article class="project">
+            <div class="project-top"><span>Android · Internship</span><span>03</span></div>
+            <h3>Coin Ranking</h3>
+            <p>An Android application presenting cryptocurrency information, developed during my software engineering internship.</p>
+            <div class="tags"><span>Android</span><span>Kotlin</span><span>Networking</span></div>
+            <a class="project-link" href="https://github.com/bitua79/coin_ranking_app" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a>
+          </article>
+          <article class="project">
+            <div class="project-top"><span>Java · University project</span><span>04</span></div>
+            <h3>Erinne Game Platform</h3>
+            <p>A JavaFX game platform with single-player and two-player modes and chat functionality, developed as an object-oriented programming project.</p>
+            <div class="tags"><span>Java</span><span>JavaFX</span><span>OOP</span><span>WebSocket</span></div>
+            <a class="project-link" href="https://github.com/bitua79/OOP-javafx-final" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">04 / Skills</div>
+          <div>
+            <h2>Tools I work with.</h2>
+            <p class="section-intro">A practical overview of technologies I've used across professional, research, and academic projects.</p>
+          </div>
+        </div>
+        <div class="skills-grid">
+          <div class="skill"><h3>Android development</h3><p>Kotlin, Java, Android SDK, Jetpack Compose, XML layouts, Retrofit, OkHttp, Room, Hilt</p></div>
+          <div class="skill"><h3>Software engineering</h3><p>MVVM, Clean Architecture, REST APIs, Git, debugging, code maintenance, application security</p></div>
+          <div class="skill"><h3>Testing & research</h3><p>JUnit, Appium, automated testing, GUI-based test repair, software quality, LLMs for software engineering</p></div>
+          <div class="skill"><h3>Programming languages</h3><p>Kotlin, Java, Python, C, C++, SQL, JavaScript</p></div>
+          <div class="skill"><h3>Data & backend basics</h3><p>SQLite, Room, PostgreSQL, MySQL, Firebase, networking</p></div>
+          <div class="skill"><h3>Embedded & communication</h3><p>JNI, MQTT, UDP, ESP, Arduino, hardware–software integration</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact-panel">
+          <div>
+            <div class="section-kicker" style="color:#a8d0c1;margin-bottom:14px">05 / Contact</div>
+            <h2>Let's connect.</h2>
+            <p>I'm always happy to connect with people working on software engineering, mobile development, testing, and research.</p>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:bita.karvizi1379@gmail.com">Email ↗</a>
+            <a href="https://www.linkedin.com/in/bita-karvizi-191920199" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a href="https://github.com/bitua79" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="https://t.me/Bit_tua" target="_blank" rel="noopener noreferrer">Telegram ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <span>© <span id="year">2026</span> Bita Karvizi</span>
+    <span>Designed with care · Hosted on GitHub Pages</span>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
