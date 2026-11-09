@@ -1,3 +1,18 @@
+const lenis = new Lenis({
+    duration: 1.8,
+    smoothWheel: true,
+    wheelMultiplier: 0.7,
+    touchMultiplier: 1.2,
+    lerp: 0.08
+});
+
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
 document.querySelectorAll(".year").forEach(el=>el.textContent=new Date().getFullYear());
 const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target)}})},{threshold:.12});
 document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
