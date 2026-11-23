@@ -1,8 +1,8 @@
 :root {
     --ink: #252344;
     --muted: #74728d;
-    --purple: #655bd5;
-    --blue: #4388df;
+    --purple: #c00000;
+    --blue: #6f0e0e;
     --lav: #efedff;
     --line: #e9e7f5;
     --paper: #f8f8fd;
@@ -159,7 +159,7 @@ button {
     padding: 4px 24px;
     margin-top: 4px;
     border-radius: 999px;
-    background: linear-gradient(135deg, #746be3, #55a3ed);
+    background: linear-gradient(135deg, var(--purple), var(--blue));
     color: #fff;
     text-decoration: none;
     font-weight: 500;
