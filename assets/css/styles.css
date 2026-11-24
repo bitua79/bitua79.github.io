@@ -1,8 +1,8 @@
 :root {
     --ink: #252344;
     --muted: #74728d;
-    --purple: #c00000;
-    --blue: #6f0e0e;
+    --LMaroon: #c00000;
+    --Maroon: #6f0e0e;
     --lav: #efedff;
     --line: #e9e7f5;
     --paper: #f8f8fd;
@@ -29,12 +29,12 @@ body {
 }
 
 a {
-    color: var(--purple);
+    color: var(--LMaroon);
     text-decoration: none
 }
 
 a:hover {
-    color: var(--blue)
+    color: var(--Maroon)
 }
 
 button {
@@ -96,7 +96,7 @@ button {
 }
 
 .role b {
-    color: var(--purple);
+    color: var(--LMaroon);
     font-weight: 700
 }
 
@@ -127,7 +127,7 @@ button {
 
 .side-nav a:hover, .side-nav a.active {
     background: var(--lav);
-    color: var(--purple);
+    color: var(--LMaroon);
     transform: translateX(3px)
 }
 
@@ -144,7 +144,7 @@ button {
 }
 
 .social a:hover {
-    color: var(--blue)
+    color: var(--Maroon)
 }
 
 .side-foot {
@@ -159,7 +159,7 @@ button {
     padding: 4px 24px;
     margin-top: 4px;
     border-radius: 999px;
-    background: linear-gradient(135deg, var(--purple), var(--blue));
+    background: linear-gradient(135deg, var(--LMaroon), var(--Maroon));
     color: #fff;
     text-decoration: none;
     font-weight: 500;
@@ -226,7 +226,7 @@ main {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    color: var(--purple);
+    color: var(--LMaroon);
     font-size: 12px;
     font-weight: 800;
     letter-spacing: .16em;
@@ -237,7 +237,7 @@ main {
     content: "";
     width: 30px;
     height: 2px;
-    background: linear-gradient(90deg, var(--purple), var(--blue))
+    background: linear-gradient(90deg, var(--LMaroon), var(--Maroon))
 }
 
 .hero h2 {
@@ -247,7 +247,7 @@ main {
 }
 
 .hero h2 em {
-    color: var(--purple);
+    color: var(--LMaroon);
     font-weight: 500
 }
 
@@ -275,7 +275,7 @@ main {
     justify-content: center;
     padding: 12px 21px;
     border-radius: 8px;
-    background: linear-gradient(110deg, var(--purple), var(--blue));
+    background: linear-gradient(110deg, var(--LMaroon), var(--Maroon));
     color: white;
     font-size: 13px;
     font-weight: 800;
@@ -292,7 +292,7 @@ main {
 .btn.outline {
     background: transparent;
     border: 1px solid #d6d3ed;
-    color: var(--purple);
+    color: var(--LMaroon);
     box-shadow: none
 }
 
@@ -329,7 +329,7 @@ section.block {
 }
 
 .section-label {
-    color: var(--purple);
+    color: var(--LMaroon);
     font-size: 11px;
     font-weight: 800;
     letter-spacing: .18em;
@@ -344,7 +344,7 @@ section.block {
 }
 
 .section-title em {
-    color: var(--purple)
+    color: var(--LMaroon)
 }
 
 .lead {
@@ -416,7 +416,7 @@ section.block {
     top: 7px;
     width: 12px;
     height: 12px;
-    background: linear-gradient(135deg, var(--purple), var(--blue));
+    background: linear-gradient(135deg, var(--LMaroon), var(--Maroon));
     border: 3px solid var(--paper);
     border-radius: 50%;
     box-shadow: 0 0 0 2px #dcd8fa
@@ -429,7 +429,7 @@ section.block {
 
 .item .place {
     font-size: 12px;
-    color: var(--purple);
+    color: var(--LMaroon);
     font-weight: 800
 }
 
@@ -528,7 +528,7 @@ section.block {
     top: 0;
     bottom: 0;
     width: 3px;
-    background: linear-gradient(var(--purple), var(--blue));
+    background: linear-gradient(var(--LMaroon), var(--Maroon));
     transform: scaleY(0);
     transform-origin: bottom;
     transition: transform .3s
@@ -547,7 +547,7 @@ section.block {
 .project-top {
     display: flex;
     justify-content: space-between;
-    color: var(--purple);
+    color: var(--LMaroon);
     font-size: 10px;
     font-weight: 800;
     letter-spacing: .12em;
@@ -601,7 +601,7 @@ section.block {
     display: grid;
     place-items: center;
     background: var(--lav);
-    color: var(--purple);
+    color: var(--LMaroon);
     font-weight: 800;
     margin-bottom: 13px
 }
