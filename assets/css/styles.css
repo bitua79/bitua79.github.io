@@ -1,13 +1,13 @@
 :root {
-    --ink: #252344;
-    --muted: #74728d;
-    --LMaroon: #c00000;
+    --ink: #30232a;
+    --muted: #786b70;
+    --LMaroon: #a64d65;
     --Maroon: #6f0e0e;
-    --lav: #efedff;
-    --line: #e9e7f5;
-    --paper: #f8f8fd;
+    --lav: #f5e9ed;
+    --line: #ead9df;
+    --paper: #fcf8f9;
     --white: #fff;
-    --shadow: 0 18px 55px rgba(64, 55, 135, .09)
+    --shadow: 0 18px 55px rgba(83, 29, 47, .09)
 }
 
 * {
@@ -65,10 +65,10 @@ button {
     border-radius: 50%;
     display: grid;
     place-items: center;
-    background: linear-gradient(135deg, #746be3, #55a3ed);
+    background: linear-gradient(135deg, #a64d65, #c78b9b);
     color: #fff;
     font: 500 43px "Playfair Display", serif;
-    box-shadow: 0 12px 35px #6a62cf40;
+    box-shadow: 0 12px 35px #6f0e0e22;
     position: relative;
 }
 
@@ -122,7 +122,7 @@ button {
 
 .side-nav a span {
     font-size: 10px;
-    color: #aaa7c5
+    color: #b7a5ab
 }
 
 .side-nav a:hover, .side-nav a.active {
@@ -140,7 +140,7 @@ button {
 .social a {
     font-size: 12px;
     font-weight: 800;
-    color: #8986a2
+    color: #8c7d83
 }
 
 .social a:hover {
@@ -149,7 +149,7 @@ button {
 
 .side-foot {
     font-size: 10px;
-    color: #aaa8bb;
+    color: #b7a5ab;
     margin-top: 18px;
     text-align: center
 }
@@ -163,13 +163,13 @@ button {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    box-shadow: 0 12px 35px #6a62cf40;
+    box-shadow: 0 12px 35px #6f0e0e22;
     transition: transform .2s ease, box-shadow .2s ease;
 }
 
 .cv-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 16px 40px #6a62cf55;
+    box-shadow: 0 16px 40px #6f0e0e35;
 }
 
 main {
@@ -198,7 +198,7 @@ main {
     width: 390px;
     height: 390px;
     border-radius: 50%;
-    background: radial-gradient(circle, #dedbff 0, rgba(222, 219, 255, 0) 70%);
+    background: radial-gradient(circle, #f1e1e7 0, rgba(241, 225, 231, 0) 70%);
     right: -90px;
     top: 45px;
     animation: breathe 8s ease-in-out infinite
@@ -210,7 +210,7 @@ main {
     width: 230px;
     height: 230px;
     border-radius: 50%;
-    background: radial-gradient(circle, #d9efff 0, rgba(217, 239, 255, 0) 70%);
+    background: radial-gradient(circle, #f6edf0 0, rgba(246, 237, 240, 0) 70%);
     right: 18%;
     bottom: 20px;
     animation: breathe 10s ease-in-out infinite reverse
@@ -253,7 +253,7 @@ main {
 
 .hero p {
     max-width: 650px;
-    color: #77758d;
+    color: #786b70;
     font-size: 16px;
     line-height: 1.95
 }
@@ -279,19 +279,19 @@ main {
     color: white;
     font-size: 13px;
     font-weight: 800;
-    box-shadow: 0 9px 24px #655bd533;
+    box-shadow: 0 9px 24px #6f0e0e22;
     transition: transform .25s, box-shadow .25s
 }
 
 .btn:hover {
     color: #fff;
     transform: translateY(-3px);
-    box-shadow: 0 13px 28px #655bd54d
+    box-shadow: 0 13px 28px #6f0e0e35
 }
 
 .btn.outline {
     background: transparent;
-    border: 1px solid #d6d3ed;
+    border: 1px solid #e2cbd3;
     color: var(--LMaroon);
     box-shadow: none
 }
@@ -308,7 +308,7 @@ main {
 }
 
 .hero-note div {
-    border-left: 2px solid #d8d4ff;
+    border-left: 2px solid #e6cbd3;
     padding-left: 12px
 }
 
@@ -362,7 +362,7 @@ section.block {
 
 .about-copy p {
     font-size: 14px;
-    color: #77758d;
+    color: #786b70;
     margin: 0 0 17px
 }
 
@@ -388,14 +388,14 @@ section.block {
 .chip {
     font-size: 11px;
     font-weight: 700;
-    color: #625bb4;
+    color: #713248;
     background: var(--lav);
     border-radius: 6px;
     padding: 7px 10px
 }
 
 .timeline {
-    border-left: 2px solid #dedbfa;
+    border-left: 2px solid #e8d5dc;
     margin: 12px 0 0 7px;
     padding-left: 28px;
     display: grid;
@@ -419,7 +419,7 @@ section.block {
     background: linear-gradient(135deg, var(--LMaroon), var(--Maroon));
     border: 3px solid var(--paper);
     border-radius: 50%;
-    box-shadow: 0 0 0 2px #dcd8fa
+    box-shadow: 0 0 0 2px #d9bdc7
 }
 
 .item h3 {
@@ -435,7 +435,7 @@ section.block {
 
 .item .date {
     font-size: 11px;
-    color: #9a97ae;
+    color: #8c7d83;
     white-space: nowrap
 }
 
@@ -478,7 +478,7 @@ section.block {
 
 .edu .date {
     font-size: 11px;
-    color: #9996ac;
+    color: #8c7d83;
     white-space: nowrap
 }
 
@@ -537,7 +537,7 @@ section.block {
 .project:hover {
     transform: translateY(-6px);
     box-shadow: var(--shadow);
-    border-color: #d5d0f5
+    border-color: #d9bdc7
 }
 
 .project:hover:before {
@@ -619,7 +619,7 @@ section.block {
 }
 
 .contact-card {
-    background: linear-gradient(120deg, #5149b7, #477fd0);
+    background: linear-gradient(120deg, #6f0e0e, #431321);
     border-radius: 18px;
     padding: 42px;
     color: #fff;
@@ -640,7 +640,7 @@ section.block {
 }
 
 .contact-card .section-label {
-    color: #dcd9ff
+    color: #f3dfe6
 }
 
 .contact-card h2 {
@@ -649,7 +649,7 @@ section.block {
 }
 
 .contact-card p {
-    color: #e2e7ff;
+    color: #f8edf1;
     font-size: 13px;
     max-width: 560px
 }
@@ -680,7 +680,7 @@ section.block {
 
 footer {
     padding: 28px 0 38px;
-    color: #a09db2;
+    color: #8c7d83;
     font-size: 10px;
     display: flex;
     justify-content: space-between;
@@ -946,7 +946,7 @@ footer {
 .language-switch a:hover,
 .language-switch a.current {
     background: var(--lav);
-    color: var(--purple);
+    color: var(--LMaroon);
 }
 @media (max-width: 700px) {
     .language-switch {
